@@ -59,3 +59,18 @@ def swap_three(list, pos_1, pos_2, pos_3):
 
 print(swap_three([1,2,3,4,5,6,7,8,9], 2,5,8))
 
+#Approach  Using * operand. 
+#This operand proposes a change to iterable unpacking syntax, allowing to specify a “catch-all” name which will be assigned a list of all items not assigned to a “regular” name. 
+
+
+def swapList(list):
+     
+    start, *middle, end = list
+    list = [end, *middle, start]
+     
+    return list
+     
+# Driver code
+newList = [12, 35, 9, 56, 24]
+ 
+print(swapList(newList))
